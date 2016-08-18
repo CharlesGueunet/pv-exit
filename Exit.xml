@@ -1,0 +1,41 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="filters">
+   <SourceProxy name="Exit" class="vtkExit" label="Exit">
+     <Documentation
+        long_help="Leave paraview"
+        short_help="Leave paraview">
+        When using script, this plugin close paraview.
+        It use exit so a GLX_BAD context may appear.
+     </Documentation>
+
+     <InputProperty
+        name="Input"
+        command="SetInputConnection">
+           <ProxyGroupDomain name="groups">
+             <Group name="sources"/>
+             <Group name="filters"/>
+           </ProxyGroupDomain>
+           <DataTypeDomain name="input_type">
+             <DataType value="vtkDataSet"/>
+           </DataTypeDomain>
+      </InputProperty>
+
+      <IntVectorProperty
+          name="quit"
+          command="SetQuit"
+          number_of_elements="1"
+          default_values="0">
+          <BooleanDomain name="bool" />
+          <Documentation>
+              If true, paraview will shutdown
+          </Documentation>
+      </IntVectorProperty>
+
+      <Hints>
+          <ShowInMenu category="extensions" />
+      </Hints>
+
+   </SourceProxy>
+ </ProxyGroup>
+</ServerManagerConfiguration>
+
