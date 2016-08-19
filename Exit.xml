@@ -32,7 +32,7 @@
       </IntVectorProperty>
 
       <Hints>
-          <ShowInMenu category="extensions" />
+          <ShowInMenu category="Extensions" />
       </Hints>
 
    </SourceProxy>
