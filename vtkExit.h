@@ -5,8 +5,8 @@
 // random scalar-field when tracking a bug on a plugin.
 // It will allow you to keep the problematic data-set.
 
-#ifndef __vtkGenericWriter_h
-#define __vtkGenericWriter_h
+#ifndef __vtkExit_h
+#define __vtkExit_h
 
 #include "vtkDataSetAlgorithm.h"
 
