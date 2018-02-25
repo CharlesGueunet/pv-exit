@@ -5,6 +5,8 @@
 #include "vtkInformationVector.h"
 #include "vtkObjectFactory.h"
 
+#include <csignal>
+
 vtkStandardNewMacro(vtkExit);
 
 // Public
@@ -59,7 +61,10 @@ int vtkExit::RequestData(vtkInformation*        request,
   // this plugin does not modify the input
   outputData->ShallowCopy(inputData);
 
-  if(Quit) exit(0);
+  if (Quit) {
+    // proper way to exit calling all destructor
+    raise(SIGKILL);
+  }
 
   return 1;
 }
