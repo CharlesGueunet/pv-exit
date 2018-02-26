@@ -63,7 +63,7 @@ int vtkExit::RequestData(vtkInformation*        request,
 
   if (Quit) {
     // proper way to exit calling all destructor
-    raise(SIGKILL);
+    raise(SIGTERM);
   }
 
   return 1;
