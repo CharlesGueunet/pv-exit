@@ -30,3 +30,4 @@ add_paraview_plugin(Exit "1.0"
     SERVER_MANAGER_XML Exit.xml
     SERVER_MANAGER_SOURCES vtkExit.cxx)
 
+ install(TARGETS Exit DESTINATION ${CMAKE_INSTALL_PREFIX})
